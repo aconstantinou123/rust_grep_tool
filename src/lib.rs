@@ -27,7 +27,7 @@ impl Config {
         }
         let query = args[1].clone();
         let filename = args[2].clone();
-        let mut case_sensitive = true;
+        let case_sensitive;
         match args.len() {
             4 => {
                 let case = args[3].clone();
