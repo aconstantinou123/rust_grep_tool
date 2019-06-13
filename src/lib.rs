@@ -37,7 +37,7 @@ impl Config {
             3 => {
                 case_sensitive = env::var("CASE_INSENSITIVE").is_err();
             }
-            _ => return Err("not enough arguments"),
+            _ => return Err("too many arguments"),
         }
         Ok(Config { query, filename, case_sensitive })
     }
