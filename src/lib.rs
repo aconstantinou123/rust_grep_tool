@@ -2,7 +2,6 @@ use std::{fs, error::Error, env};
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
-    println!("{}", config.case_sensitive);
     let results = if config.case_sensitive == true {
         search(&config.query, &contents)
     } else {
